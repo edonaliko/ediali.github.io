@@ -1,6 +1,7 @@
 // based on https://codepen.io/ellgine/pen/EjeXOZ
 
 body {
+  top: 10%;
   text-align: center;
   background-color: #1d1f20;
 }
