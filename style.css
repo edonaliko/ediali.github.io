@@ -18,9 +18,6 @@ body {
   border-bottom: 0;
 }
 
-.text.hidden {
-  border-bottom: 1px solid #fff;
-}
 
 .text li {
   display: inline-block;
