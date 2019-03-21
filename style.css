@@ -58,12 +58,12 @@ body{
     box-sizing: border-box;
 }
 
-body2{
+/* body{
     margin: 0;
     background-color: #232323;
     color: #fff;
     font-family: Calibri, sans-serif;
-}
+} */
 
 .center{
     width: 100%;
