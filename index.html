@@ -14,17 +14,14 @@
 
 <body>
 
-  <ul class="text hidden">
-  <li>E</li>
-  <li class="ghost">d</li>
-  <li class="ghost">o</li>
-  <li class="ghost">n</li>
-  <li class="spaced">A</li>
-  <li class="ghost">l</li>
-  <li class="ghost">i</li>
-  <li class="ghost">k</li>
-  <li class="ghost">o</li>
-</ul>
+  - var text = "Edon Aliko"
+
+div.wrapper
+    div.letters
+        each letter in text
+          span.letter !{letter}
+    p Generate Random Text Transformation Using CSS Only
+  
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
 
   
