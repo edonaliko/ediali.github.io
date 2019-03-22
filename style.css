@@ -44,6 +44,14 @@ p {
   word-break: break-all;
   background-color: #1d1f20;
 }
+.letter2:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  word-break: break-all;
+  background-color: #1d1f20;
+}
 
 .letter:nth-child(1):before {
   content: "010001001111";
@@ -255,7 +263,7 @@ p {
     margin-top: 24px;
   }
 }
-.letter:nth-child(8):before {
+.letter2:nth-child(8):before {
   content: "000110111100";
   margin-top: -72px;
   -webkit-animation-name: letter7;
