@@ -256,14 +256,14 @@ p {
   }
 }
 .letter:nth-child(8):before {
-  content: "100001111100";
-  margin-top: -52px;
-  -webkit-animation-name: letter8;
-          animation-name: letter8;
-  -webkit-animation-duration: 2.5333333333s;
-          animation-duration: 2.5333333333s;
-  -webkit-animation-delay: 0.05s;
-          animation-delay: 0.05s;
+  content: "000110111100";
+  margin-top: -72px;
+  -webkit-animation-name: letter7;
+          animation-name: letter7;
+  -webkit-animation-duration: 2.43s;
+          animation-duration: 2.43s;
+  -webkit-animation-delay: 0.19s;
+          animation-delay: 0.19s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
