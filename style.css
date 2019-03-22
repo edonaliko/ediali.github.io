@@ -257,7 +257,7 @@ p {
 }
 .letter:nth-child(8):before {
   content: "100001111100";
-  margin-top: -48px;
+  margin-top: -52px;
   -webkit-animation-name: letter8;
           animation-name: letter8;
   -webkit-animation-duration: 2.5333333333s;
