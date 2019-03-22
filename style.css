@@ -7,9 +7,8 @@ body {
 
 .wrapper {
   position: absolute;
-  left: 87%;
-  top: 10%;
-  width: 90%;
+  text_align: center;
+
   font-size: 0;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
