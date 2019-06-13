@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Edon Aliko</title>
     <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
   </head>
 
   <style>
@@ -52,13 +53,20 @@
       
       function myMove() {
         var elem = document.getElementById("animate");   
-        var pos = 0;
+        var pos = -150;
         var id = setInterval(frame, 5);
         elem.style.top = -180 + 'px'; 
         function frame() {
           if (pos == 1500) {
             clearInterval(id);
-          } else {
+          } 
+          if (pos == 100){
+            document.getElementById("animate").innerHTML = "hover me"; 
+            pos++;
+            pos++;
+            elem.style.right = pos + "px";
+          }
+          else {
             pos++;
             pos++;
             elem.style.right = pos + "px"; 
@@ -69,6 +77,24 @@
       
     </script>
 
+    
+    
+    <div align="center" class="main">
+        <a id="top" class="smooth" style="color:#180530"> &nbsp; </a>
+
+        <h1>Edon Aliko</h1>
+        <p>
+            <a href="https://www.linkedin.com/in/edonaliko/">LinkedIn</a> &nbsp; | &nbsp; <a href="https://devpost.com/ediali">Devpost</a> &nbsp; | &nbsp; <a href="https://github.com/ediali">GitHub</a> &nbsp; | &nbsp; <a href="mailto:edon.aliko@gmail.com">Email</a>
+        </p>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+    </div>
+    
   </body>
 
 </html>
