@@ -5,93 +5,146 @@
     <meta charset="UTF-8">
     <title>Edon Aliko</title>
     <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet"> 
+      <style>
+          .overlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow-y: hidden;
+        transition: 0.5s;  
+      }
+
+    .overlay-content {
+      position: relative;
+      top: 40%;
+      width: 100%;
+      text-align: center;
+      margin-top: 0px;
+    }
+
+    .overlay a {
+      text-decoration: none;
+      font-size: 20px;
+      color: #818181;
+      transition: 0.3s;
+    }
+
+    .overlay a:hover, .overlay a:focus {
+      color: #f1f1f1;
+    }
+
+    .overlay .closebtn {
+    position: absolute;
+    right: 45px;
+    font-size: 60px;
+  }
+
+    @media screen and (max-height: 450px) {
+      .overlay {overflow-y: auto;}
+      .overlay a {font-size: 20px}
+      .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+      }
+    }
+    </style>
   </head>
 
-  <style>
-    #animate {
-      width: 230px;
-      height: 230px;
-      position: absolute;
-    }
-    
-    #myContainer {
-      width: 100%;
-      height: 10px;
-      position: absolute;
-      bottom: 0px;
-      background: navy;
-  }
-    
-    
-  img:hover {
-    animation: shake 0.5s;
-    animation-iteration-count: infinite;
-    
-  }
-
-  @keyframes shake {
-    0% { transform: translate(1px, 1px) rotate(0deg); }
-    10% { transform: translate(-1px, -2px) rotate(-5deg); }
-    20% { transform: translate(-3px, 0px) rotate(5deg); }
-    30% { transform: translate(3px, 2px) rotate(0deg); }
-    40% { transform: translate(1px, -1px) rotate(5deg); }
-    50% { transform: translate(-1px, 2px) rotate(-5deg); }
-    60% { transform: translate(-3px, 1px) rotate(0deg); }
-    70% { transform: translate(3px, 1px) rotate(-5deg); }
-    80% { transform: translate(-1px, -1px) rotate(5deg); }
-    90% { transform: translate(1px, 2px) rotate(0deg); }
-    100% { transform: translate(1px, -2px) rotate(-5deg); }
-  }
-
-  </style>
 
   <body>
+
+    <div align="center">
+        <a id="coloredBy"> &nbsp; </a>          
+        <h1 id = "headerColor">EDON ALIKO</h1>
+        <p>
+          <a id = "aColor1" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; ABOUT</a>
+        </p>
+        <a id="typewriter"></a>
+      
+        <script>
+          var i = 0;
+          var txt = "DON'T HOVER OVER ME!";
+          var speed = 50;
+          
+          function typeWriter() {
+            if (i < txt.length) {
+              document.getElementById("typewriter").innerHTML += txt.charAt(i);
+              i++;
+              setTimeout(typeWriter, speed);
+            }
+
+          }
+          typeWriter()
+        </script>
+    </div>
+    
+    <div id="myNav" class="overlay">
+      <div class="overlay-content">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="https://www.linkedin.com/in/edonaliko/">LINKEDIN</a><br><br><br>
+          <a href="https://devpost.com/ediali">DEVPOST</a><br><br><br>
+          <a href="https://github.com/ediali">GITHUB</a><br><br><br>
+          <a href="mailto:edon.aliko@gmail.com">EMAIL</a><br><br><br>
+      </div>
+    </div>
+
     <div id ="myContainer">
       <img src="https://cdn.glitch.com/3d86e013-7105-4744-9726-5e036679c266%2Fbitmoji.png?v=1560463520228" id="animate"/>
     </div>
+    
     <script>
-      
       function myMove() {
         var elem = document.getElementById("animate");   
         var pos = -150;
         var id = setInterval(frame, 5);
-        elem.style.top = -200 + 'px'; 
+        elem.style.top = -220 + 'px'; 
         function frame() {
           if (pos == 1500) {
             clearInterval(id);
           } 
-          if (pos == 100){
-            document.getElementById("animate").innerHTML = "hover me"; 
-            pos++;
-            pos++;
-            elem.style.right = pos + "px";
-          }
           else {
-            pos++;
-            pos++;
+            pos+=1.3;
             elem.style.right = pos + "px"; 
           }
         }
       }
-      myMove()
-      
+      myMove();
     </script>
 
+    <script>
+    function openNav() {
+      document.getElementById("myNav").style.height = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.height = "0%";
+    }
+    </script>
     
-    
-    <div align="center" class="main">
-        <a id="top" class="smooth" style="color:#180530"> &nbsp; </a>
-
-        <h1>Edon Aliko</h1>
-        <p>
-            <a href="https://www.linkedin.com/in/edonaliko/">LinkedIn</a> &nbsp; | &nbsp; <a href="https://devpost.com/ediali">Devpost</a> &nbsp; | &nbsp; <a href="https://github.com/ediali">GitHub</a> &nbsp; | &nbsp; <a href="mailto:edon.aliko@gmail.com">Email</a>
-        </p>
-
-
-
-
-    </div>
+    <script>
+      setInterval(
+      function () {
+        var o = Math.round, r = Math.random; s = 4;
+        var colors = ["red","LimeGreen", "orange", "purple", "navy"];
+        var fontColors = ["yellow","DeepPink","navy","white", "cyan"];
+        var i = o(r()*s)
+        var randomColor = colors[i];
+        var randomFontColor = fontColors[i];
+        document.body.style.backgroundColor = randomColor;
+        document.getElementById("coloredBy").style.color = randomFontColor;
+        document.getElementById("typewriter").style.color = randomFontColor;
+        document.getElementById("myContainer").style.backgroundColor = randomFontColor;
+        document.getElementById("headerColor").style.color = randomFontColor;
+        document.getElementById("aColor1").style.color = randomFontColor;
+      },3000);
+    </script>
     
   </body>
 
