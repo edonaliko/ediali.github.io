@@ -61,30 +61,93 @@
   <body>
 
     <div align="center">
-        <a id="coloredBy"> &nbsp; </a>          
-        <h1 id = "headerColor">EDON ALIKO</h1>
-        <p>
-          <a id = "aColor1" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; ABOUT</a>
-        </p>
-        <a id="typewriter"></a>
+      <a id="coloredBy"> &nbsp; </a>          
+      <h1 id = "headerColor">EDON ALIKO</h1>
+      <p>
+        <a id = "aColor1" style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776; ABOUT</a>
+      </p>
+      <a id="typewriter"></a>
+      <div id="container">
+        <div id="text"></div><div id="cursor"></div>
+      </div>
       
-        <script>
-          
-          var i = 0;
-          var txt = "DON'T HOVER OVER ME!";
-          var speed = 50;
-          
-          function typeWriter() {
-            if (i < txt.length) {
-              document.getElementById("typewriter").innerHTML += txt.charAt(i);
-              i++;
-              setTimeout(typeWriter, speed);
-            }
+      <script>
+      var _CONTENT = [ 
+        "Hello World, I'm Edon!", 
+        "I'm a CS student and Morgan Stanley Tech Analyst", 
+        "Want to get in touch?", 
+        "Click above and contact me",
+        "P.S. Hover over me ;)",
+        " ",
+        " ",
+        " "
+      ];
 
-          }
-          typeWriter()
-          
-        </script>
+      // Current sentence being processed
+      var _PART = 0;
+
+      // Character number of the current sentence being processed 
+      var _PART_INDEX = 0;
+
+      // Holds the handle returned from setInterval
+      var _INTERVAL_VAL;
+
+      // Element that holds the text
+      var _ELEMENT = document.querySelector("#text");
+
+      // Cursor element 
+      var _CURSOR = document.querySelector("#cursor");
+
+      // Implements typing effect
+      function Type() { 
+        // Get substring with 1 characater added
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX++;
+
+        // If full sentence has been displayed then start to delete the sentence after some time
+        if(text === _CONTENT[_PART]) {
+          // Hide the cursor
+          _CURSOR.style.display = 'none';
+
+          clearInterval(_INTERVAL_VAL);
+          setTimeout(function() {
+            _INTERVAL_VAL = setInterval(Delete, 50);
+          }, 1000);
+        }
+      }
+
+      // Implements deleting effect
+      function Delete() {
+        // Get substring with 1 characater deleted
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX--;
+
+        // If sentence has been deleted then start to display the next sentence
+        if(text === '') {
+          clearInterval(_INTERVAL_VAL);
+
+          // If current sentence was last then display the first one, else move to the next
+          if(_PART == (_CONTENT.length - 1))
+            _PART = 0;
+          else
+            _PART++;
+
+          _PART_INDEX = 0;
+
+          // Start to display the next sentence after some time
+          setTimeout(function() {
+            _CURSOR.style.display = 'inline-block';
+            _INTERVAL_VAL = setInterval(Type, 100);
+          }, 300);
+        }
+      }
+
+      // Start the typing effect on load
+      _INTERVAL_VAL = setInterval(Type, 100);
+      </script>
+      
     </div>
     
     <div id="myNav" class="overlay">
@@ -119,14 +182,14 @@
         }
       }
       myMove();
-      setInterval(function() {
+      interval = setInterval(function() {
         var elem = document.getElementById("animate");   
         var pos = -150;
         var id = setInterval(frame, 5);
         elem.style.top = -220 + 'px'; 
         function frame() {
           if (pos >= 1500) {
-            clearInterval(id);
+            clearInterval(interval);
           } 
           else {
             pos+=1.3;
@@ -162,7 +225,10 @@
         document.getElementById("myContainer").style.backgroundColor = randomFontColor;
         document.getElementById("headerColor").style.color = randomFontColor;
         document.getElementById("aColor1").style.color = randomFontColor;
-      },4000);
+        document.getElementById("text").style.color = randomFontColor;
+        document.getElementById("cursor").style.backgroundColor = randomFontColor;
+        
+      },5000);
     </script>
     
   </body>
