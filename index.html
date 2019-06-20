@@ -75,9 +75,8 @@
       var _CONTENT = [ 
         "Hello World, I'm Edon!", 
         "I'm a CS student and a Morgan Stanley Tech Analyst", 
-        "Want to get in touch?", 
-        "Click above and contact me",
-        "P.S. Hover over me ;)",
+        "Want to get in touch or know more?", 
+        "Click above or scroll down",
         " ",
         " ",
         " "
@@ -159,45 +158,53 @@
           <a href="mailto:edon.aliko@gmail.com">EMAIL</a><br><br><br>
       </div>
     </div>
-
+    
     <div id ="myContainer">
       <img src="https://cdn.glitch.com/3d86e013-7105-4744-9726-5e036679c266%2Fbitmoji.png?v=1560811899054" id="animate"/>
+        <div id = "code">
+          <div id = "console">
+          public class About{
+            <br><br>
+            <span class="answer">
+              &emsp;&emsp; this.Education = 
+            </span> 
+            <b>The University of Edinburgh</b>;<br><br>
+            <span class ="answer">
+               &emsp;&emsp; this.LatestExperience = 
+            </span> 
+            <b>Morgan Stanley App Development Summer Analyst</b>;<br><br>
+            <span class="answer">
+              &emsp;&emsp; this.PersonalProjects = 
+            </span>  = {
+            <a class = "link" href="https://devpost.com/software/youchoose">YouChoose</a>,
+            <a class = "link" href="https://devpost.com/software/student-reax">Student Reax</a>,
+            <a class = "link" href="https://github.com/ediali/Facial-Recognition">Passport Face Recognition</a>            
+            };
+            <b></b><br><br>
+          }<br>
+          </div>
+        </div>
     </div>
     
     <script>
       
       function myMove() {
         var elem = document.getElementById("animate");   
-        var pos = -150;
+        var pos = -250;
         var id = setInterval(frame, 5);
         elem.style.top = -220 + 'px'; 
         function frame() {
-          if (pos >= 1500) {
+          if (pos >= 3000) {
             clearInterval(id);
           } 
           else {
-            pos+=1.3;
+            pos+=0.7;
             elem.style.right = pos + "px"; 
           }
         }
       }
       myMove();
-      interval = setInterval(function() {
-        var elem = document.getElementById("animate");   
-        var pos = -150;
-        var id = setInterval(frame, 5);
-        elem.style.top = -220 + 'px'; 
-        function frame() {
-          if (pos >= 1500) {
-            clearInterval(interval);
-          } 
-          else {
-            pos+=1.3;
-            elem.style.right = pos + "px"; 
-          }
-        }
-      }
-    , 10000);
+      
     </script>
 
     <script>
@@ -228,7 +235,7 @@
         document.getElementById("text").style.color = randomFontColor;
         document.getElementById("cursor").style.backgroundColor = randomFontColor;
         
-      },5000);
+      },12000);
     </script>
     
   </body>
