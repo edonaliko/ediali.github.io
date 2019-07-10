@@ -33,19 +33,19 @@ h1 {
 }
 
 span.answer {
-  color:#ccc;
+  color:#daac25;
 }
 
 
 #code {
   position: relative;
-  top: 20%;
+  top: 15%;
   border-radius: 5px;
   width:750px;
   margin: 0 auto;
   padding-top:15px;
   font-size:30px;
-  background: #ccc;
+  background: #b3b3b3;
   height: 700px;
   font-family: 'Monaco', 'Courier New';
   text-align: left;
@@ -54,6 +54,7 @@ span.answer {
 }
 
 a {
+    text-decoration: none;
     margin-top: 20%;
     font-size: 60%;
     font-family: 'Press Start 2P', cursive;
@@ -71,7 +72,11 @@ a.link{
   font-size:13px;
   font-weight: bold;
   font-family: 'Monaco', 'Courier New';
-  color:white;
+  color:#5bb0e8;
+}
+
+a.link:hover{
+  text-decoration: underline;
 }
 
 #typewriter{
@@ -96,8 +101,10 @@ a.link{
     
 #myContainer {
     min-width: 100%;
-    height: 110%;
     position: absolute;
+    height: 110%;
+    left:0;
+    right:0;
     bottom: -105%;
     background: cyan;
     -webkit-transition: all 2s ease-in-out;
