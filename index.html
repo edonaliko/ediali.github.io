@@ -76,7 +76,7 @@
         "Hello World, I'm Edon!", 
         "I'm a CS student and a Morgan Stanley Tech Analyst", 
         "Want to get in touch or know more?", 
-        "Click above or scroll down",
+        "Click above or scroll down!",
         " ",
         " ",
         " "
@@ -111,8 +111,8 @@
 
           clearInterval(_INTERVAL_VAL);
           setTimeout(function() {
-            _INTERVAL_VAL = setInterval(Delete, 50);
-          }, 1000);
+            _INTERVAL_VAL = setInterval(Delete, 60);
+          }, 700);
         }
       }
 
@@ -138,7 +138,7 @@
           // Start to display the next sentence after some time
           setTimeout(function() {
             _CURSOR.style.display = 'inline-block';
-            _INTERVAL_VAL = setInterval(Type, 100);
+            _INTERVAL_VAL = setInterval(Type, 70);
           }, 300);
         }
       }
@@ -163,25 +163,44 @@
       <img src="https://cdn.glitch.com/3d86e013-7105-4744-9726-5e036679c266%2Fbitmoji.png?v=1560811899054" id="animate"/>
         <div id = "code">
           <div id = "console">
-          public class About{
+            <span style = "color:#daac25"> class  </span> About:
             <br><br>
             <span class="answer">
-              &emsp;&emsp; this.Education = 
-            </span> 
-            <b>The University of Edinburgh</b>;<br><br>
+              &emsp;&emsp;<span style= "color:#ad0e98">self.</span>Education  
+            </span> = 
+            <b>The University of Edinburgh</b>
+            <br><br><br>
+            
             <span class ="answer">
-               &emsp;&emsp; this.LatestExperience = 
-            </span> 
-            <b>Morgan Stanley App Development Summer Analyst</b>;<br><br>
-            <span class="answer">
-              &emsp;&emsp; this.PersonalProjects = 
-            </span>  = {
+               &emsp;&emsp;<span style= "color:#ad0e98">self.</span>Latest_Experience 
+            </span> = 
+            <b>Morgan Stanley App Development Summer Analyst</b>
+            <br><br><br>
+            
+            <span class="answer">  
+              &emsp;&emsp;<span style= "color:#ad0e98">self.</span>Projects 
+            </span> = [
             <a class = "link" href="https://devpost.com/software/youchoose">YouChoose</a>,
             <a class = "link" href="https://devpost.com/software/student-reax">Student Reax</a>,
             <a class = "link" href="https://github.com/ediali/Facial-Recognition">Passport Face Recognition</a>            
-            };
-            <b></b><br><br>
-          }<br>
+            ]
+            <br><br><br>
+          
+            <span class="answer">
+            &emsp;&emsp;<span style= "color:#ad0e98">self.</span>Skills 
+            </span> = [ Python, Java, Matlab, SQL ]
+            <br><br><br>
+            
+            <span class="answer">
+            &emsp;&emsp;<span style= "color:#ad0e98">self.</span>Interests 
+            </span> = [ Biking, Trading, Piano_and_Guitar, ML ]
+            <br><br><br>
+            
+            <span class="answer">  
+              &emsp;&emsp;<span style= "color:#ad0e98">self.</span>Curriculum_Vitae 
+            </span> = 
+            <a class = "link" href="https://cdn.glitch.com/3d86e013-7105-4744-9726-5e036679c266%2FmainCV.pdf?v=1562190442748">Resume</a>
+          <br>
           </div>
         </div>
     </div>
