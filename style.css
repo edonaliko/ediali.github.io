@@ -2,6 +2,7 @@
 body {
   text-align: center;
   background-color: navy;
+  font-family: 'Karla', sans-serif;
   min-width: 100%;
   -webkit-transition: all 2s ease-in-out;
   -moz-transition: all 2s ease-in-out;
@@ -27,7 +28,7 @@ h1 {
 #console {
   width:670px;
   padding: 40px;
-  height: 620px;
+  height: 500px;
   margin:0 auto;
   background: #383737;
 }
@@ -36,19 +37,18 @@ span.answer {
   color:#daac25;
 }
 
-
 #code {
   position: relative;
-  top: 15%;
+  top: 10%;
   border-radius: 5px;
   width:750px;
   margin: 0 auto;
   padding-top:15px;
   font-size:30px;
   background: #b3b3b3;
-  height: 700px;
+  height: 500px;
   font-family: 'Monaco', 'Courier New';
-  text-align: left;
+  text-align: justify;
   font-size:13px;
   color: #fafafa;
 }
@@ -66,7 +66,6 @@ a {
     -ms-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
 }
-
 
 a.link{
   font-size:13px;
@@ -102,10 +101,10 @@ a.link:hover{
 #myContainer {
     min-width: 100%;
     position: absolute;
-    height: 110%;
+    height: 900px;
     left:0;
     right:0;
-    bottom: -105%;
+    top: 92%;
     background: cyan;
     -webkit-transition: all 2s ease-in-out;
     -moz-transition: all 2s ease-in-out;
@@ -113,9 +112,35 @@ a.link:hover{
     -ms-transition: all 2s ease-in-out;
     transition: all 2s ease-in-out;
     }
-    
 
-img:hover{
+#resume {
+    min-width: 100%;
+    position: absolute;
+    height: 1500px;
+    left:0;
+    right:0;
+    top: 100%;
+    background: #5d70a2;
+    height: auto;
+    margin-top: -30px;
+    padding-top: 60px;
+    font-size: 19px;
+    text-align : left;
+    line-height: 34px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+    -ms-transition: all 2s ease-in-out;
+    transition: all 2s ease-in-out;
+}
+
+div.inner *
+{
+    color: white;
+}
+
+.wiggle:hover {
   animation: shake 0.5s;
   animation-iteration-count: 50;
 
@@ -174,5 +199,90 @@ img:hover{
 	}
 	50% { 
 		background-color: white; 
+	}
+}  
+
+.inner {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.right {
+  float: right;
+}
+
+
+.tagline {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  padding-bottom: 50px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.section-tagline {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #CEC8C8;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+.skill {
+  border: 1px solid #50a9d1;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  width: auto;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1.33333em;
+  padding: 7px 18px;
+  margin-top: 0.8em;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+}
+
+#resume .inner {
+  width:700px;
+}
+
+img.icon {
+  width: 65px;
+  height: 65px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius:50%;
+  float: left;
+  display: block;
+  margin-left: -95px;
+  margin-top: 5px;
+  background-color: #fff;
+
+
+#work{
+  background: #eee;
+  height: auto;
+  margin-top: -30px;
+  text-align: center;
+  padding: 60px 0 60px 0;
+  font-size: 26px;
+  line-height: 40px;
+}
+
+.row {
+  clear: both;
+}hite; 
 	}
 }
